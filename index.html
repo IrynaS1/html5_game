@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Игра в попапе</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .game-container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .score-board {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        .message {
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        
+        .prize {
+            background: gold;
+            color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎁 Колесо удачи 🎁</h1>
+        <div class="score-board">Очки: <span id="score">0</span></div>
+        <div>
+            <button id="clickBtn">Нажми меня!</button>
+            <button id="resetBtn">Сбросить</button>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
